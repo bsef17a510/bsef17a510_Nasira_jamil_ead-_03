@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "addnewitem";
+}
+
+<h2>addnewitem</h2>
+<form id="newform" action="/home/addnewitem" method="post">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" name="nm"></td>
+            
+        </tr>
+        <tr>
+            <td>price:</td>
+            <td><input type="text" name="p"></td>
+        </tr>
+        <tr>
+            <td>category:</td>
+            <td>
+                <select name="c">
+                    <option value="syrup">syrup</option>
+                    <option value="injection">injection</option>
+                    <option value="tablet">tablet</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>ExpiryDate:</td>
+            <td><input type="text" name="d"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="add new medicine" /></td>
+        </tr>
+        <tr>
+            <td><a href="/home/Index">GO TO MAIN PAGE</a></td>
+        </tr>
+    </table>
+</form>

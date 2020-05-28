@@ -1,0 +1,46 @@
+﻿@model IEnumerable<pharmacy.Models.store>
+@{
+    ViewBag.Title = "PHARMACY MANAGEMENT SYSTEM";
+   <table border="1">
+    <tr>
+        <td><b>Id</b></td>
+        <td><b>Name</b></td>
+        <td><b>Price</b></td>
+        <td><b>ExpiryDate</b></td>
+    </tr>
+    
+       @foreach(var s in Model)
+       {
+            <tr>
+        <td>@s.Id</td>
+        <td>@s.Name</td>
+        <td>@s.price</td>
+        <td>@s.expiryDate</td>
+                <td>
+                    <a href="/home/edit/@s.Id">edit</a>
+                </td>
+    </tr>
+   
+       }
+       
+    
+</table>
+}
+
+<br /><br />
+<a href="/home/addnewitem">add new item</a>
+<h4>category:</h4>
+<form name="category" id="f" method="post" action="/home/Index">
+   
+    <select name="cat" id="one">
+        <option value="tablet">tablet</option>
+        <option value="syrup">syrup</option>
+        <option value="injection">injection</option>
+    </select>
+    <input type="submit" value="click here to display this category"/>
+   
+</form>
+
+
+
+
